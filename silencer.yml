@@ -1,7 +1,7 @@
 ---
 - hosts: silencer
   tasks:
-  - name: transfer data from machine1 to machine2
+  - name: transfer data from machine1 to machine2 {{ silencer-ansible.amagi.tv }}
 
     copy:
      src=/data/ansible/test.txt

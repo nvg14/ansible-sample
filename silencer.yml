@@ -1,5 +1,5 @@
 ---
-- hosts: silencer
+- hosts: silencer-ansible.amagi.tv
   tasks:
   - name: transfer data from machine1 to machine2 {{ ansible_host }}
 

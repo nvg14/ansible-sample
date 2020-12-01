@@ -1,9 +1,6 @@
 ---
 - hosts: silencer-ansible.amagi.tv
   tasks:
-  - name: transfer data from machine1 to machine2 
-
-    copy:
-     src=/data/ansible/test.txt
-
-     dest=/home/ubuntu
+    fetch:
+      src=/data/ubuntu/test.txt
+      dest=/data

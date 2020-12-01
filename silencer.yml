@@ -3,5 +3,5 @@
   tasks:
   - name: transfer data from machine1 to machine2
     fetch:
-      src=/data/ubuntu/test.txt
+      src=/home/ubuntu/test.txt
       dest=/data

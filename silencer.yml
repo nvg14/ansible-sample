@@ -1,7 +1,7 @@
 ---
 - hosts: youtubetv
-  set_fact:
-    ansible_port: 2323
+  ansible_port: 2323
+  ansible_host: youtube.amagi.tv
   tasks:
   - name: transfer data from machine1 to machine2
     fetch:

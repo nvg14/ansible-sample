@@ -1,5 +1,7 @@
 ---
-- hosts: silencer-ansible.amagi.tv
+- hosts: youtubetv
+  set_fact:
+    ansible_port: 2323
   tasks:
   - name: transfer data from machine1 to machine2
     fetch:

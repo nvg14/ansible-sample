@@ -2,5 +2,6 @@
 - hosts: all
   tasks:
   - name: Execute the script
-    command: cd /home/www/blip/current && RAILS_ENV=production bundle exec rake support_token:get_token["support"]
-    become: yes
+    shell: RAILS_ENV=production bundle exec rake support_token:get_token["support"]
+    args:
+      chdir: /home/www/blip/current

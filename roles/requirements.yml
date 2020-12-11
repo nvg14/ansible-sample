@@ -1,7 +1,0 @@
----
-- hosts: all
-  name: rake
-  roles:
-    - yatesr.timezone
-  vars:
-    timezone: Europe/Berlin

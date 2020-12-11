@@ -1,5 +1,5 @@
 ---
-- hosts: a1091
+- hosts: all
   tasks:
   - name: Execute the script
     command: cd /home/www/blip/current && RAILS_ENV=production bundle exec rake support_token:get_token["support"]

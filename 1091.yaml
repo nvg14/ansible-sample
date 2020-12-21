@@ -1,12 +1,12 @@
 ---
 - hosts: "{{host_name}}"
   tasks:
-  - name: Execute the rake script
+  - name: Execute the rake script to get token
     shell: RAILS_ENV=production bundle exec rake support_token:get_token["support"]
     args:
-      chdir: /home/www/blip/current
+      chdir: "{{rake_dir}}"
   - name: Copy the token to local system
     fetch:
-      src: /tmp/support_token.txt
-      dest: /tmp/config-svc/store/blips/{{ansible_ssh_host}}/token.txt
+      src: "{{token_src}}"
+      dest: "{{token_dest}}/{{ansible_ssh_host}}/token.txt"
       flat: yes
